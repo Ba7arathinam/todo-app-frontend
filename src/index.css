@@ -40,30 +40,52 @@ h1{
   justify-content: center;
 }
 
+#dark h1{
+  color: #b9adad;
+}
+
+#light h1{
+  color: #322d2d;
+}
+
 input{
   font-size: 16px;
   font-size: max(16px, 1em);
   width: 400px;
   font-family: inherit;
   padding: 0.25em 0.5em;
-  background-color: #fff;
   border: 2px solid var(--input-border);
   border-radius: 4px;
 }
 
-
-.add{
-  background-color: #000;
-  color: #fff;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
+#dark input{
+  background-color: #d2cccc;
+}
+#light input{
+  background-color: rgb(248, 248, 249);
+  color: #2c2929;
 }
 
+/* .add{
+  background-color: #000;
+  color: #cfc6c6;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+} */
+#dark .todo{
+  background-color: #2c2929;
+  color: #b9adad;
+}
+
+#light .todo{
+  background-color:  #b9adad;
+  color:  #2c2929;
+}
 .todo{
   position: relative;
   margin-top: 1rem;
-  background-color: #000;
-  color: #fff;
+  background-color: #2c2929;
+  color: #b9adad;
   padding: 1.5rem 3rem;
   border-radius: 5px;
 }
@@ -74,10 +96,20 @@ input{
   transform: translateY(-50%);
   right: 20px;
   display: flex;
+  color: #fff;
   gap: 0.5rem;
 }
-
+.del{
+  transform:scale();
+  transition-duration: 0.7s;
+}
+.del:hover{
+color: rgb(181, 82, 82);
+}
 .icon{
   cursor: pointer;
   font-size: 20px;
+}
+.icon:hover{
+  color: rgb(156, 38, 185);
 }

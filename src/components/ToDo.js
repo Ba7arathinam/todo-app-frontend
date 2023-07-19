@@ -1,15 +1,14 @@
 import React from 'react'
 
-import {BiEdit} from "react-icons/bi"
-import {AiFillDelete} from "react-icons/ai"
-
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditNoteIcon from '@mui/icons-material/EditNote';
 const ToDo = ({text, updateMode, deleteToDo}) => {
     return (
         <div className="todo">
             <div className="text">{text}</div>
             <div className="icons">
-                <BiEdit className='icon' onClick={updateMode} />
-                <AiFillDelete className='icon' onClick={deleteToDo} />
+                <EditNoteIcon className='icon'  onClick={updateMode} />
+                <DeleteIcon className='del' onClick={deleteToDo} />
             </div>
         </div>
     )
